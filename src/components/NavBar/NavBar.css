@@ -1,0 +1,27 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.nav__list {
+	display: flex;
+	gap: 1rem;
+}
+
+.nav__btn-menu {
+	position: relative;
+	cursor: pointer;
+	z-index: 999;
+	aspect-ratio: 1 / 1;
+	font-size: 1rem;
+}
+
+@media screen and (width >= 768px) {
+	.nav__list {
+		justify-content: center;
+		position: absolute;
+		width: 100%;
+	}
+}
