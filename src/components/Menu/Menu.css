@@ -1,10 +1,11 @@
 .aside {
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 	gap: 1rem;
 	width: fit-content;
 	height: 100%;
-	padding: 1.5rem 1rem;
+	padding: 1rem;
 	background-color: hsl(0, 0%, 10%);
 	position: fixed;
 	top: 0;
@@ -25,5 +26,28 @@
 .aside__menu-btn {
 	display: flex;
 	width: fit-content;
-	font-size: 1rem;
+	font-size: 1.25rem;
+}
+
+.aside > .wrapper:first-of-type {
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid hsl(0, 0%, 40%);
+}
+
+@media screen and (width >= 769px) {
+	.aside {
+		position: relative;
+		transform: translateX(0);
+		background-color: transparent;
+	}
+
+	.aside.closed,
+	.aside.open {
+		position: relative;
+		transform: translateX(0);
+	}
+
+	.aside__menu-btn {
+		display: none;
+	}
 }

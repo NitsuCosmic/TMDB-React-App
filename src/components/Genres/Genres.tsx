@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { TOKEN } from "../../../private/token/token.ts";
 import "./Genres.css";
 
 interface Props {
@@ -20,8 +21,7 @@ export default function Genres({ label, genre }: Props) {
 				method: "GET",
 				headers: {
 					accept: "application/json",
-					Authorization:
-						"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NTAwZjEzOGZmYzhiNjFiMjM2NzAyM2Q1MDRhMjUwNSIsIm5iZiI6MTcyOTA4NTY0NC43MzA2NDcsInN1YiI6IjY3MDZkMjY0OGZiNzIzYTBiNmUwYjUyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M0Pualayx5n64KxwhrqrdsgaoctBnuaaA0Wzucyk4zw",
+					Authorization: "Bearer " + TOKEN,
 				},
 			};
 			try {
@@ -41,7 +41,7 @@ export default function Genres({ label, genre }: Props) {
 
 	return (
 		<div className="wrapper">
-			<h3 className="title">{label}</h3>
+			<h3 className="list__title">{label}</h3>
 			<ul className="aside__list">
 				{genres &&
 					genres.map((genre) => (

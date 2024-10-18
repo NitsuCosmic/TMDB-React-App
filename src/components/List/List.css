@@ -1,0 +1,27 @@
+.list__header-title {
+	font-size: clamp(1rem, 5vw, 1.5rem);
+	line-height: 2.25rem;
+}
+
+.list__content {
+	display: flex;
+	gap: 0.5rem;
+	width: 100%;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+	padding-bottom: 0.5rem;
+}
+
+@media screen and (width >= 768px) {
+	.list__content::-webkit-scrollbar {
+		background-color: hsl(0, 0%, 8%);
+		border-radius: 1rem;
+		height: 0.5rem;
+	}
+
+	.list__content::-webkit-scrollbar-thumb {
+		height: 0.25rem;
+		border-radius: 1rem;
+		background-color: hsl(0, 0%, 20%);
+	}
+}

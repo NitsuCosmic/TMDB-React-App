@@ -9,25 +9,24 @@ interface Props {
 
 export default function NavBar({ toggleMenu }: Props) {
 	return (
-		<header className="hero">
-			<nav className="nav">
-				<button className="nav__btn-menu" onClick={toggleMenu}>
-					<FontAwesomeIcon icon={faBars} />
-				</button>
-				<ul className="nav__list">
-					<li className="nav__list-item">
-						<a href="#" className="nav__list-link">
-							Movies
-						</a>
-					</li>
-					<li className="nav__list-item">
-						<a href="#" className="nav__list-link">
-							Series
-						</a>
-					</li>
-				</ul>
-				<SearchBar inMenu={false} />
-			</nav>
-		</header>
+		<nav className="nav">
+			<button className="nav__btn-menu" onClick={toggleMenu}>
+				<FontAwesomeIcon icon={faBars} />
+			</button>
+			<h1 className="title">TMDB App</h1>
+			<ul className="nav__list">
+				<li className="nav__list-item">
+					<a href="#" className="nav__list-link">
+						Movies
+					</a>
+				</li>
+				<li className="nav__list-item">
+					<a href="#" className="nav__list-link">
+						Series
+					</a>
+				</li>
+			</ul>
+			<SearchBar inMenu={false} />
+		</nav>
 	);
 }
